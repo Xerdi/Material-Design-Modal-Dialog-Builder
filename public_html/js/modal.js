@@ -78,3 +78,7 @@ Modal.prototype.show = function () {
     document.body.appendChild(this.dialog);
     $(this.dialog).modal();
 };
+Modal.prototype.close = function () {
+    $(this.dialog).modal('hide');
+    document.body.removeChild(this.dialog);
+};

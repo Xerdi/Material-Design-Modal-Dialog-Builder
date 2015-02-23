@@ -44,7 +44,11 @@ limitations under the License.
         </div>
 
         <div class="container">
-
+            <div style="text-align: center;">
+                <a href="javascript:void(0)" class="btn btn-primary" id="first">Primary</a>&nbsp;&nbsp;&nbsp;
+                <a href="javascript:void(0)" class="btn btn-primary" id="second">Primary</a>&nbsp;&nbsp;&nbsp;
+                <a href="javascript:void(0)" class="btn btn-primary" id="third">Primary</a>
+            </div>
         </div>
 
         <!--    JAVASCRIPT DEPENENCIES      -->
@@ -56,17 +60,22 @@ limitations under the License.
         <script src="material/js/material.min.js"></script>
 
         <script src="js/modal.js"></script>
-            
+
         <script>
 
             var modal = new Modal({
-                title: "dit is een title",
-                body: document.createTextNode("dude"),
-                success: "save",
-                url: "http://google.com",
+                title: "A modal example!",
+                body: document.createTextNode("This is an example of an HTML DOM element added to the body of the modal."),
+                success: "success button",
+                url: "http://example.com",
                 process: function () {
-                    alert("dude");
+                    //some ajax functions
+                    modal.close();
                 }
+            });
+            
+            $('#first').click(function() {
+                modal.show();
             });
 
         </script>
